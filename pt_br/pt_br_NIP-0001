@@ -1,0 +1,345 @@
+# NIP 1 - NIP Process
+
+```
+    NIP: 1
+    Title: NIP Process
+    Author: Aleix <aleix@nemeurope.eu>
+    Comments-Summary: No comments yet.
+    Status: Active
+    Type: Process
+    Created: 2018-01-07
+    License: BSD-2-Clause
+```
+
+## Abstract
+
+A NEM Improvement Proposal (NIP) is a design document providing information to the NEM community, or describing a new feature for NEM or its processes or environment. The NIP should provide a concise technical specification of the feature and a rationale for the feature.
+
+We intend NIPs to be the primary mechanisms for proposing new features, for collecting community input on an issue, and for documenting the design decisions that have gone into NEM. The NIP author is responsible for building consensus within the community and documenting dissenting opinions.
+
+Because the NIPs are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+
+This particular NIP replaces NIP 1 with a more well-defined and clear process.
+
+## Copyright
+
+This NIP is dual-licensed under the Open Publication License and BSD 2-clause license.
+
+## NIP workflow
+
+The NIP process begins with a new idea for NEM. Each potential NIP must have a author -- someone who writes the NIP using the style and format described below, shepherds the discussions in the appropriate forums, and attempts to build community consensus around the idea. The NIP author should first attempt to ascertain whether the idea is NIP-able.
+Small enhancements or patches to a particular piece of software often don't require standardisation between multiple projects; these don't need a NIP and should be injected into the relevant project-specific development workflow with a patch submission to the applicable issue tracker.
+The first step should be to search past discussions to see if an idea has been considered before, and if so, what issues arose in its progression.
+After investigating past work, the best way to proceed is by posting about the new idea to the [NEM Improvement Process Telegram Group][nem-improvement-process-telegram].
+
+Vetting an idea publicly before going as far as writing a NIP is meant to save both the potential author and the wider community time.
+Asking the NEM community first if an idea is original helps prevent too much time being spent on something that is guaranteed to be rejected based on prior discussions (searching the internet does not always do the trick).
+It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will work for most people in most areas where NEM is used.
+
+Once the author has asked the NEM community as to whether an idea has any chance of acceptance, a draft NIP should be presented as new issue at [NIPs/issues][nips-issues].
+This gives the author a chance to flesh out the draft NIP to make it properly formatted, of high quality, and to address additional concerns about the proposal.
+Following a discussion, the proposal should be submitted to the [NIPs git repository][nips-repository] as a pull request.
+This draft must be written in NIP style as described below, and named with an alias such as "NIP-johndoe-newfeaturetitle" until the editor has assigned it a NIP number (authors MUST NOT self-assign NIP numbers).
+
+NIP authors are responsible for collecting community feedback on both the initial idea and the NIP before submitting it for review. However, wherever possible, long open-ended discussions on public telegram groups should be avoided. Strategies to keep the discussions efficient include: setting up a different telegram group channel, having the NIP author accept private comments in the early design phases, setting up a wiki page or git repository, etc. NIP authors should use their discretion here.
+
+It is highly recommended that a single NIP contain a single key proposal or new idea. The more focused the NIP, the more successful it tends to be. If in doubt, split your NIP into several well-focused ones.
+
+When the NIP draft is complete, the NIP editor will assign the NIP a number, label it as Standards Track, Informational, or Process, and merge the pull request to the NIPs git repository.
+The NIP editor will not unreasonably reject a NIP.
+Reasons for rejecting NIPs include duplication of effort, disregard for formatting rules, being too unfocused or too broad, being technically unsound, not providing proper motivation or addressing backwards compatibility, or not in keeping with the NEM philosophy.
+For a NIP to be accepted it must meet certain minimum criteria.
+It must be a clear and complete description of the proposed enhancement.
+The enhancement must represent a net improvement.
+The proposed implementation, if applicable, must be solid and must not complicate the component unduly.
+
+The NIP author may update the draft as necessary in the git repository. Updates to drafts should also be submitted by the author as pull requests.
+
+### Transferring NIP Ownership
+
+It occasionally becomes necessary to transfer ownership of NIPs to a new author. In general, we'd like to retain the original author as a co-author of the transferred NIP, but that's really up to the original author. A good reason to transfer ownership is because the original author no longer has the time or interest in updating it or following through with the NIP process, or has fallen off the face of the 'net (i.e. is unreachable or not responding to email). A bad reason to transfer ownership is because you don't agree with the direction of the NIP. We try to build consensus around a NIP, but if that's not possible, you can always submit a competing NIP.
+
+If you are interested in assuming ownership of a NIP, send a message asking to take over, addressed to both the original author and the NIP editor. If the original author doesn't respond to email in a timely manner, the NIP editor will make a unilateral decision (it's not like such decisions can't be reversed :).
+
+### NIP Editor
+
+The current NIP editor is David who can be contacted at david@nemeurope.eu or @dgarcia360.
+
+### NIP Editor Responsibilities & Workflow
+
+The NIP editor is in the [nem-improvement-process telegram group][nem-improvement-process-telegram], he/she will follow your NIP.
+
+For each new NIP that comes in an editor does the following:
+
+* Read the NIP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don't seem likely to be accepted.
+* The title should accurately describe the content.
+* The NIP draft must have been published to as an [issue][nips-issues].
+* Motivation and backward compatibility (when applicable) must be addressed.
+* The defined Layer header must be correctly assigned for the given specification.
+* Licensing terms must be acceptable for NIPs.
+
+If the NIP isn't ready, the editor will send it back to the author for revision, with specific instructions.
+
+Once the NIP is ready for the repository it should be submitted as a "pull request" to the [NIPs git repository][nips-repository] where it may get further feedback.
+
+The NIP editor will:
+
+* Assign a NIP number in the pull request.
+
+* Merge the pull request when it is ready.
+
+* List the NIP in [README.md](../README.md)
+
+The NIP editors are intended to fulfill administrative and editorial responsibilities. The NIP editors monitor NIP changes, and update NIP headers as appropriate.
+
+## NIP format and structure
+
+### Specification
+
+NIPs should be written in markdown format.
+
+Each NIP should have the following parts:
+
+* Summary: Headers containing metadata about the NIP, see NIP header preamble.
+
+* Introduction/Abstract: A short (~200 word) description of the technical issue being addressed.
+
+* Copyright: The NIP must be explicitly licensed under acceptable copyright terms, see NIP licensing below.
+
+* Specification: The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current components.
+
+* Motivation: The motivation is critical for NIPs that want to change NEM components. It should clearly explain why the existing component is inadequate to address the problem that the NIP solves.
+
+* Design Decisions: The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion.
+
+* Implementation: The reference implementation must be completed before any NIP is given status "Final", but it need not be completed before the NIP is accepted. It is better to finish the specification and rationale first and reach consensus on it before writing code. The final implementation must include test code and documentation appropriate for the NEM protocol.
+
+* Backwards compatibility: All NIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The NIP must explain how the author proposes to deal with these incompatibilities.
+
+#### NIP header preamble
+
+Each NIP must begin with an RFC 822 style header preamble. The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+```
+    NIP: <NIP number, or "?" before being assigned>
+    Title: <NIP title; maximum 44 characters>
+    Author: <list of authors' real names and email addrs>
+    * Discussions-To: <telegram group>
+    * Comments-Summary: <summary tone>
+    Comments-URI: <links to issue page for comments>
+    Status: <Draft | Active | Proposed | Deferred | Rejected |
+            Withdrawn | Final | Replaced | Obsolete>
+    Type: <Standards Track | Informational | Process>
+    * Layer: <Core | API | SDK | Application | Library>
+    Created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+    License: <abbreviation for approved license(s)>
+    * License-Code: <abbreviation for code under different approved license(s)>
+    * Requires: <NIP number(s)>
+    * Replaces: <NIP number>
+    * Superseded-By: <NIP number>
+```
+
+The Layer header (only for Standards Track NIPs) documents which layer of NEM the NIP applies to.
+
+While a NIP is in private discussions (usually during the initial Draft phase), a Discussions-To header will indicate the telegram group or URL where the NIP is being discussed.
+
+The Type header specifies the type of NIP: Standards Track, Informational, or Process.
+
+The Created header records the date that the NIP was assigned a number, while Post-History is used to record when new versions of the NIP are posted to NEM mailing lists.
+Dates should be in yyyy-mm-dd format, e.g. 2001-08-14.
+Post-History is permitted to be a link to a specific thread in a mailing list archive.
+
+NIPs may have a Requires header, indicating the NIP numbers that this NIP depends on.
+
+NIPs may also have a Superseded-By header indicating that a NIP has been rendered obsolete by a later document; the value is the number of the NIP that replaces the current document. The newer NIP must have a Replaces header containing the number of the NIP that it rendered obsolete.
+
+#### Auxiliary Files
+
+NIPs may include auxiliary files such as diagrams. Auxiliary files should be included in a subdirectory for that NIP, or must be named NIP-XXXX-Y.ext, where "XXXX" is the NIP number, "Y" is a serial number (starting at 1), and "ext" is replaced by the actual file extension (e.g. "png").
+
+## NIP types
+
+There are three kinds of NIP:
+
+* A Standards Track NIP describes any change that affects most or all NEM implementations. Standards Track NIPs consist of two parts, a design document and a reference implementation.
+  * Core:
+  * API:
+  * SDK:
+  * Application:
+  * Library:
+* An Informational NIP describes a NEM design issue, or provides general guidelines or information to the NEM community, but does not propose a new feature. Informational NIPs do not necessarily represent a NEM community consensus or recommendation, so users and implementors are free to ignore Informational NIPs or follow their advice.
+* A Process NIP describes a process surrounding NEM, or proposes a change to (or an event in) a process. Process NIPs are like Standards Track NIPs but apply to areas other than the NEM protocol itself. They may propose an implementation, but not to NEM's codebase; they often require community consensus; unlike Informational NIPs, they are more than recommendations, and users are typically not free to ignore them. Examples include procedures, guidelines, changes to the decision-making process, and changes to the tools or environment used in NEM development. Any meta-NIP is also considered a Process NIP.
+
+## NIP status field
+
+### Specification
+
+The typical paths of the status of NIPs are as follows:
+
+<img src=./nip-0001/process.png>
+
+Authors of a NIP may decide on their own to change the status between Draft, Deferred, or Withdrawn.
+The NIP editor may also change the status to Deferred when no progress is being made on the NIP.
+
+A NIP may only change status from Draft (or Rejected) to Proposed, when the author deems it is complete, has a working implementation (where applicable), and has community plans to progress it to the Final status.
+
+NIPs should be changed from Draft or Proposed status, to Rejected status, upon request by any person, if they have not made progress in 6 months. Such a NIP may be changed to Draft status if the author provides revisions that meaningfully address public criticism of the proposal, or to Proposed status if it meets the criteria required as described in the previous paragraph.
+
+An Proposed NIP may progress to Final only when specific criteria reflecting real-world adoption has occurred. This is different for each NIP depending on the nature of its proposed changes, which will be expanded on below. Evaluation of this status change should be objectively verifiable, and/or be discussed on the development mailing list.
+
+When a Final NIP is no longer relevant, its status may be changed to Replaced or Obsolete (which is equivalent to Replaced). This change must also be objectively verifiable and/or discussed.
+
+A process NIP may change status from Draft to Active when it achieves rough consensus on the mailing list. Such a proposal is said to have rough consensus if it has been open to discussion on the development mailing list for at least one month, and no person maintains any unaddressed substantiated objections to it. Addressed or obstructive objections may be ignored/overruled by general agreement that they have been sufficiently addressed, but clear reasoning must be given in such circumstances.
+
+### Structure of the process
+
+The NIP process involves the following parties:
+
+1. The NIP Author(s)
+2. The NIP Editor
+3. The NIP Committee
+
+#### The NIP Author(s)
+
+Authors are responsible for building consensus within the community and documenting dissenting opinions before the NIP is officially discussed by the NIP Committee. Their goal is to convince the committee that their proposal is useful and addresses pertinent problems in the components as well as interactions with already existing features. Authors can change over the life-cycle of the NIP.
+
+#### The NIP Editor
+
+The NIP Editor is the responsible of the smooth running of NIPs. He or she appoints the committee members, calls the meetings monthly, assigns new proposals to the members, and ensures that all of them are discussed within a short period of time.
+
+#### The NIP Committee
+
+The NIP Committee is an experienced group of people with knowledge of the core protocol, sdks layer, applications and libraries, responsible for the strategic direction of NEM. Members are tasked with (a) communicating with the community, (b) weighing in pros and cons of every proposal, and (c) accepting, postponing or rejecting the proposal.
+
+Committee members should be either individuals responsible for a specific part of the NEM codebase, committers or contributors of the NEM. Exceptionally, members may also be important representatives of the community with a high technical knowledge to understand the implications of every proposal and participate into the discussions. The members are elected by the NIP Editor based on their expertise and implication in the community.
+
+The current committee members are:
+
+* Jaguar0625
+* bloodyrookie
+* gimre
+* Aleix <aleix@nemeurope.eu>
+* Guillem <guillem@nemeurope.eu>
+
+#### Reviewers
+
+The NIP Editor assigns every proposal to a member of the committee, who becomes the reviewer. The main tasks of the reviewer are the following:
+
+* Discuss unclear points with the authors,
+* Help them address their issues and questions,
+* Provide them feedback from the discussions in the meetings, and
+* Explain the latest progress in every meeting.
+
+#### Voting
+
+All NIP Committee members vote. They can either vote in the meeting or by casting their vote via email to the NIP Editor before the set deadline.
+
+NIP Committee members can vote “in favor”, “against” or “abstain”.
+
+For a NIP to be accepted, the following three requirements must be met:
+
+* At least 50% of the committee members vote in favor.
+* There are at least two-thirds “in favor” versus “against” votes.
+
+An alternative way to think of the two-thirds requirement is that the number of votes in favor must be at least twice the number of votes against. Abstentions are excluded in calculating a two-thirds vote.
+
+Note that, when calculating the lower bound, numbers round up. Therefore for a committee of 9 members, at least 50% means at least 5 members.
+
+The deadline to vote a proposal is decided on a case-by-case basis. The deadline will be decided by the committee members present at the last meeting and the NIP Editor, and will be made public right after the meeting.
+
+#### Responsibilities of the members
+
+Review the proposals they are assigned to. The NIP Editor will always notify them two weeks in advance, at minimum.
+Play a role in the discussions, learn in advance about the topic if needed, and make up their mind in the voting process.
+Decide which utilities should be inside a component. The goal is to shrink it over time, and, where possible, move NIPs to the components.
+
+#### Guests
+
+Experts in some fields of the component may be invited to concrete meetings as guests when discussing related NIPs. Their input would be important to discuss the current state of the proposal, both its design and implementation.
+
+## NIP licensing
+
+### Specification
+
+New NIPs may be accepted with the following licenses. Each new NIP must identify at least one acceptable license in its preamble. The License header in the preamble must be placed after the Created header. Each license must be referenced by their respective abbreviation given below.
+
+For example, a preamble might include the following License header:
+
+    License: BSD-2-Clause
+             GNU-All-Permissive
+
+In this case, the NIP text is fully licensed under both the OSI-approved BSD 2-clause license as well as the GNU All-Permissive License, and anyone may modify and redistribute the text provided they comply with the terms of *either* license. In other words, the license list is an "OR choice", not an "AND also" requirement.
+
+It is also possible to license source code differently from the NIP text. A optional License-Code header is placed after the License header. Again, each license must be referenced by their respective abbreviation given below.
+
+For example, a preamble specifying the optional License-Code header might look like:
+
+    License: BSD-2-Clause
+             GNU-All-Permissive
+    License-Code: GPL-2.0+
+
+In this case, the code in the NIP is not available under the BSD or All-Permissive licenses, but only under the terms of the GNU General Public License (GPL), version 2 or newer.
+If the code were to be available under *only* version 2 exactly, the "+" symbol should be removed from the license abbreviation.
+For a later version (eg, GPL 3.0), you would increase the version number (and retain or remove the "+" depending on intent).
+
+    License-Code: GPL-2.0   # This refers to GPL v2.0 *only*, no later license versions are acceptable.
+    License-Code: GPL-2.0+  # This refers to GPL v2.0 *or later*.
+    License-Code: GPL-3.0   # This refers to GPL v3.0 *only*, no later license versions are acceptable.
+    License-Code: GPL-3.0+  # This refers to GPL v3.0 *or later*.
+
+In the event that the licensing for the text or code is too complicated to express with a simple list of alternatives, the list should instead be replaced with the single term "Complex". In all cases, details of the licensing terms must be provided in the Copyright section of the NIP.
+
+NIPs are not required to be *exclusively* licensed under approved terms, and may also be licensed under unacceptable licenses *in addition to* at least one acceptable license.
+In this case, only the acceptable license(s) should be listed in the License and License-Code headers.
+
+#### Recommended licenses
+
+* MIT: [Expat/MIT/X11 license](https://opensource.org/licenses/MIT)
+* Apache-2.0: [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+* BSD-2-Clause: [OSI-approved BSD 2-clause license](https://opensource.org/licenses/BSD-2-Clause)
+* BSD-3-Clause: [OSI-approved BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause)
+* CC0-1.0: [Creative Commons CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+* GNU-All-Permissive: [GNU All-Permissive License](http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html)
+* LGPL-2.1+: [GNU Lesser General Public License (LGPL), version 2.1 or newer](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
+
+In addition, it is recommended that literal code included in the NIP be dual-licensed under the same license terms as the project it modifies. For example, literal code intended for NEM Core would ideally be dual-licensed under the MIT license terms as well as one of the above with the rest of the NIP text.
+
+#### Not recommended, but acceptable licenses
+
+* BSL-1.0: [Boost Software License, version 1.0](http://www.boost.org/LICENSE_1_0.txt)
+* CC-BY-4.0: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+* CC-BY-SA-4.0: [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+* AGPL-3.0+: [GNU Affero General Public License (AGPL), version 3 or newer](http://www.gnu.org/licenses/agpl-3.0.en.html)
+* FDL-1.3: [GNU Free Documentation License, version 1.3](http://www.gnu.org/licenses/fdl-1.3.en.html)
+* GPL-2.0+: [GNU General Public License (GPL), version 2 or newer](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
+#### Not acceptable licenses
+
+All licenses not explicitly included in the above lists are not acceptable terms for a NEM Improvement Proposal unless a later NIP extends this one to add them.
+However, NIPs predating the acceptance of this NIP were allowed under other terms, and should use these abbreviation when no other license is granted:
+
+* OPL: [http://opencontent.org/openpub/ Open Publication License, version 1.0]
+* PD: Released into the public domain
+
+### Rationale
+
+* The OPL is generally regarded as obsolete, and not a license suitable for new publications.
+* Many are unfamiliar with the OPL terms, and may just prefer to use the public domain rather than license under uncertain terms.
+* The OPL license terms allowed for the author to prevent publication and derived works, which was widely considered inappropriate for NEM standards.
+* Public domain is not universally recognised as a legitimate action, thus it is inadvisable.
+
+Why are there software licenses included?
+
+* Some NIPs, especially consensus layer, may include literal code in the NIP itself which may not be available under the exact license terms of the NIP.
+* Despite this, not all software licenses would be acceptable for content included in NIPs.
+
+Why is Public Domain no longer acceptable for new NIPs?
+
+* In some jurisdictions, public domain is not recognised as a legitimate legal action, leaving the NIP simply copyrighted with no redistribution or modification allowed at all.
+
+## History
+
+This document was derived heavily from Bitcoin's [BIP-0002](https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki) written by Luke Dashjr which in turn was derived from Python's [PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use in the NEM Improvement Process, and should not be bothered with technical questions specific to NEM or the NIP. Please direct all comments to the NIP editors.
+
+[nem-improvement-process-telegram]: https://t.me/NEMImprovementProcess
+[nips-issues]: https://github.com/NemProject/NIPs/issues
+[nips-repository]: https://github.com/NemProject/NIPs
