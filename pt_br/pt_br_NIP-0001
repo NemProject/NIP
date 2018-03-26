@@ -2,13 +2,13 @@
 
 ```
     NIP: 1
-    Title: Processo NIP
-    Author: Aleix <aleix@nemeurope.eu>
-    Comments-Summary: sem comentários ainda.
+    Título: Processo NIP
+    Autor: Aleix <aleix@nemeurope.eu>
+    Comentários Sumários : sem comentários ainda.
     Status: Ativo
-    Type: Processo
-    Created: 2018-01-07
-    License: BSD-2-claúsura.
+    Tipo: Processo
+    Creado: 2018-01-07
+    Licença: BSD-2-claúsura.
 ```
 
 ## Abstract
@@ -23,7 +23,7 @@ This particular NIP replaces NIP 1 with a more well-defined and clear process.
 
 ## Copyright
 
-This NIP is dual-licensed under the Open Publication License and BSD 2-clause license.
+Este NIP é licenciado sob a Licença de Publicação Aberta e licença BSD 2-clausura.
 
 ## Fluxo de trabalho NIP
 
