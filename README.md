@@ -16,7 +16,7 @@ Get familiar with [NIP-0001](NIPs/nip-0001.md) first. Open an issue using [this 
 | Number         | Layer    | Title             | Author        | Type             | Status    |
 | -------------- | -------- | ----------------- | ------------- | ---------------- | --------- |
 | [1][nip-0001]  |          | NIP Process       | Aleix         | Process          | Active    |
-| [2][nip-0002]  |  Library | NIP Process       | Sergi Canal   | Standards Track  | Draft     |
+| [2][nip-0002]  |  Library | Voting Library    | Sergi Canal   | Standards Track  | Draft     |
 
 [nip-0001]: NIPs/nip-0001.md
 [nip-0002]: NIPs/nip-0002.md
