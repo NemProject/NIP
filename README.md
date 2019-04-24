@@ -1,6 +1,6 @@
 # NEM Improvement Proposal
 
-:warning:️ This repository will continue being used for proposing improvements for the current version, while Catapult it is not available on the public network. However, its encouraged to start proposing improvements not associated with NIS1 API or current tools in the [new repository](https://github.com/nemtech/NIP/).
+:warning:️ Furter work on NIPs has been moved to the [new repository](https://github.com/nemtech/NIP/).
 
 
 NEM Improvement Proposals (NIPs) is the process for submitting improvements to NEM. This process aims to evolve NEM openly and collaboratively.
